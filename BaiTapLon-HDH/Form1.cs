@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace BaiTapLon_HDH
 {
@@ -15,6 +16,13 @@ namespace BaiTapLon_HDH
         public Form1()
         {
             InitializeComponent();
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string text = TextBox.Text;
+            Process process = new Process();
+            process.StartInfo.FileName = text;
+            process.Start();
         }
     }
 }
